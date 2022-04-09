@@ -85,12 +85,14 @@ constructor(
             TEXT_SIZE + 2 * STROKE_WIDTH,
             canvas
           )
+
           for (element in line.elements) {
             Log.d(TAG, "Element text is: " + element.text)
             Log.d(TAG, "Element boundingbox is: " + element.boundingBox)
             Log.d(TAG, "Element cornerpoint is: " + Arrays.toString(element.cornerPoints))
             Log.d(TAG, "Element language is: " + element.recognizedLanguage)
           }
+          return //TODO: only show first element, change in future
         }
       }
     }

@@ -18,6 +18,8 @@ package com.google.mlkit.vision.demo.kotlin.textdetector
 
 import android.content.Context
 import android.util.Log
+import android.widget.Toast
+import androidx.lifecycle.MutableLiveData
 import com.google.android.gms.tasks.Task
 import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.demo.GraphicOverlay
@@ -33,7 +35,7 @@ class TextRecognitionProcessor(private val context: Context, textRecognizerOptio
   private val textRecognizer: TextRecognizer = TextRecognition.getClient(textRecognizerOptions)
   private val shouldGroupRecognizedTextInBlocks: Boolean = PreferenceUtils.shouldGroupRecognizedTextInBlocks(context)
   private val showLanguageTag: Boolean = PreferenceUtils.showLanguageTag(context)
-
+  val cardName: MutableLiveData<String> = MutableLiveData()  //TODO: create in new module
   override fun stop() {
     super.stop()
     textRecognizer.close()
@@ -56,9 +58,17 @@ class TextRecognitionProcessor(private val context: Context, textRecognizerOptio
   }
 
   fun FilterCardName(text: Text) { // TODO: create in new module
-
-      val cardName = text.textBlocks[0].text
+    if (text.textBlocks.size > 0){
+      cardName.value = text.textBlocks[0].text
       print("Detected card name is: $cardName")
+    }
+
+
+//    val cardName = "${cardName.value} detected"
+//    val duration = Toast.LENGTH_SHORT
+//    val toast = Toast.makeText(context, cardName, duration)
+//    toast.show()
+
   }
 
   companion object {

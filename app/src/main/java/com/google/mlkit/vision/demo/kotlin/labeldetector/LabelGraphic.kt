@@ -79,6 +79,9 @@ class LabelGraphic(
       if (y + TEXT_SIZE * 2 > overlay.height) {
         break
       }
+      if (label.text == "Poster"){ //TODO: MAKE SET WITH COMMON SKIP ITEMS?
+        continue
+      }
       canvas.drawText(label.text, x, y + TEXT_SIZE, textPaint)
       y += TEXT_SIZE
       canvas.drawText(

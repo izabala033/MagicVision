@@ -176,20 +176,20 @@ class StillImageActivity : AppCompatActivity() {
     val featureSpinner = findViewById<Spinner>(R.id.feature_selector)
     val options: MutableList<String> = ArrayList()
     options.add(OBJECT_DETECTION)
-    options.add(OBJECT_DETECTION_CUSTOM)
-    options.add(CUSTOM_AUTOML_OBJECT_DETECTION)
-    options.add(FACE_DETECTION)
-    options.add(BARCODE_SCANNING)
+//    options.add(OBJECT_DETECTION_CUSTOM)
+//    options.add(CUSTOM_AUTOML_OBJECT_DETECTION)
+//    options.add(FACE_DETECTION)
+//    options.add(BARCODE_SCANNING)
     options.add(IMAGE_LABELING)
-    options.add(IMAGE_LABELING_CUSTOM)
-    options.add(CUSTOM_AUTOML_LABELING)
-    options.add(POSE_DETECTION)
-    options.add(SELFIE_SEGMENTATION)
+//    options.add(IMAGE_LABELING_CUSTOM)
+//    options.add(CUSTOM_AUTOML_LABELING)
+//    options.add(POSE_DETECTION)
+//    options.add(SELFIE_SEGMENTATION)
     options.add(TEXT_RECOGNITION_LATIN)
-    options.add(TEXT_RECOGNITION_CHINESE)
-    options.add(TEXT_RECOGNITION_DEVANAGARI)
-    options.add(TEXT_RECOGNITION_JAPANESE)
-    options.add(TEXT_RECOGNITION_KOREAN)
+//    options.add(TEXT_RECOGNITION_CHINESE)
+//    options.add(TEXT_RECOGNITION_DEVANAGARI)
+//    options.add(TEXT_RECOGNITION_JAPANESE)
+//    options.add(TEXT_RECOGNITION_KOREAN)
 
     // Creating adapter for featureSpinner
     val dataAdapter =
@@ -551,7 +551,7 @@ class StillImageActivity : AppCompatActivity() {
     private const val CUSTOM_AUTOML_OBJECT_DETECTION = "Custom AutoML Object Detection (Flower)"
     private const val FACE_DETECTION = "Face Detection"
     private const val BARCODE_SCANNING = "Barcode Scanning"
-    private const val TEXT_RECOGNITION_LATIN = "Text Recognition Latin"
+    private const val TEXT_RECOGNITION_LATIN = "Text Recognition"
     private const val TEXT_RECOGNITION_CHINESE = "Text Recognition Chinese"
     private const val TEXT_RECOGNITION_DEVANAGARI = "Text Recognition Devanagari"
     private const val TEXT_RECOGNITION_JAPANESE = "Text Recognition Japanese"
