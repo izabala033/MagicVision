@@ -107,10 +107,10 @@ class ChooserActivity :
         )
       else
         intArrayOf(
-          R.string.desc_camera_source_activity,
+          //R.string.desc_camera_source_activity,
           R.string.desc_still_image_activity,
           R.string.desc_camerax_live_preview_activity,
-          R.string.desc_cameraxsource_demo_activity
+          //R.string.desc_cameraxsource_demo_activity
         )
   }
 }
