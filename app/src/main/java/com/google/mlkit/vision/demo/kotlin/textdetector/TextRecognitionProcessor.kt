@@ -46,12 +46,19 @@ class TextRecognitionProcessor(private val context: Context, textRecognizerOptio
   override fun onSuccess(text: Text, graphicOverlay: GraphicOverlay) {
     Log.d(TAG, "On-device Text detection successful")
     logExtrasForTesting(text)
+    FilterCardName(text)
     graphicOverlay.add(
       TextGraphic(graphicOverlay, text, shouldGroupRecognizedTextInBlocks, showLanguageTag))
   }
 
   override fun onFailure(e: Exception) {
     Log.w(TAG, "Text detection failed.$e")
+  }
+
+  fun FilterCardName(text: Text) { // TODO: create in new module
+
+      val cardName = text.textBlocks[0].text
+      print("Detected card name is: $cardName")
   }
 
   companion object {
